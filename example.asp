@@ -6,6 +6,11 @@ console.log("Hello log - Line 2")
 console.log("Hello log - Line 3")
 console.info("An info test!!")
 console.warn("My warning message")
-console.error("A log for error")
+console.error("Error reported")
 %>
 <p>Empty page, look at the Browser console for checking the debug messages ;)</p>
+<%
+console.flush
+' Or, you can call the destructor for the same result of calling the method Flush
+' Set console = Nothing
+%>

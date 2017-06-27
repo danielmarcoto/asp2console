@@ -1,5 +1,5 @@
 <%
-' asp2console v 1.0
+' asp2console v 1.0.1
 '
 ' MIT License
 ' 
@@ -62,7 +62,7 @@ Class Asp2Console
 		typesDict.Add currentItem, "warn"
 	End Sub
 
-	Private Sub Class_Terminate()
+	Public Sub Flush()
 
 		If messagesDict.Count = 0 Then Exit Sub
 
@@ -103,6 +103,10 @@ Class Asp2Console
 		Set jsonObj = Nothing
 		Set messagesDict = Nothing
 		Set typesDict = Nothing
+	End Sub
+
+	Private Sub Class_Terminate()
+		Flush		
 	End Sub
 End Class
 

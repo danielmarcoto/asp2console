@@ -1,7 +1,9 @@
 Asp2console
 ===========
 
-## Version 1.0
+## Version 1.0.1
+
+> Version 1.0.1: It had added the method `flush` for allowing to send the response to the client.
 
 A Classic ASP approach to send messages from server to the Browser Console. That's useful for debbuging applications that use AJAX requests to ASP scripts.
 
@@ -14,6 +16,8 @@ Here is an example:
 	<!--#include file="asp2console.asp" -->
 	<%
 	console.log("Hello console on ASP")
+	' At the very end of the page
+	console.Flush
 	%>
 
 Unfortunately it doesn't work on Firebug console, only on browser's native console.
